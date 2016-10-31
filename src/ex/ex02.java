@@ -15,28 +15,35 @@ System.out.print("請輸入m");
 long m=scn.nextLong();
 System.out.print("請輸入n");
 long n=scn.nextLong();
+long k=m-n;
 
-fun1(m,n);
-
+fun1(m);
+fun2(n);
+fun3(k);
+long fun4=fun1(m)/(fun2(n)*fun3(k));
+System.out.print(fun4);
 	}
-public static void fun1(long m,long n){
-Scanner scn=new Scanner(System.in);	
-
-long v=m-n;
-long sum=1;
-long sum1=1;
-long sum2=1;
-for(int i=1;i<=m;i++){
-sum=sum*i;
+public static long fun1(long m){
+	long x=1;
+	
+	for(long i=m;i>0;i--){
+	x*=i;
+	}
+	return x;
 }
-for(int j=1;j<=n;j++){
-sum1=sum1*j;	
+public static long fun2(long n){
+	long y=1;
+	for(long i=n;i>0;i--){
+	y*=i;	
+	}
+	return y;
 }
-for(int k=1;k<=v;k++){
-sum2=sum2*k;	
+public static long fun3(long k){
+	long s=1;
+for(long i=k;i>0;i--){
+	s*=i;
 }
-long ans = sum/(sum1*sum2);
-System.out.print(ans);
+return s;
 }
 
 }
