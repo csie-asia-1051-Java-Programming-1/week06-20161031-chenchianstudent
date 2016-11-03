@@ -16,10 +16,12 @@ int type=scn.nextInt();
 fun1(v1,type);
 }
 public static void fun1(float v1,int type){
-	if(type==1){
-		System.out.print(v1*9/5+32);
-	}else{
-		System.out.print((v1-32)*(5/9));
+	if(type==2){
+		System.out.print((float)v1*9/5+32);
+	}else
+		if(type==1){
+		System.out.print((float)(v1-32)*5/9);//5/9 如果不加float 會變int 值為0
+		
 	}
 	
 	}	
